@@ -1,0 +1,123 @@
+/*MEDIA QUERIES*/
+@media (max-width: 767px) {
+  /*HEADER/MENU*/
+  p{
+    margin-right: 3%;
+  }
+  .navFlotante {
+    float: none;
+  }
+  nav {
+    font-family: "Nunito", sans-serif;
+    font-style: italic;
+    font-weight: 200;
+    text-align: justify;
+    font-size: 14pt;
+  }
+  /*FOOTER*/
+  .iconos {
+    margin: 0pt 10pt 0pt 10pt;
+  }
+  /*INDEX.HTML*/
+  .grilla {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    grid-template-areas:
+      "titulo     titulo"
+      "texto      texto"
+      "imagenes   imagenes";
+  }
+  .imagenes {
+    display: none;
+  }
+  .smNoVer {
+    display: none;
+  }
+  .radiusAbajoIzquierda {
+    border-radius: 0%;
+  }
+  .sinRadius{
+    border-radius: 0%;
+  }
+  /*GALERIA.HTML*/
+  .transformacion {
+    transform: none;
+  }
+  .animacion {
+    animation: none;
+  }
+  .animacion2 {
+    animation: none;
+  }
+  .tamañoDiv {
+    height: auto;
+  }
+  .smRadiusArribaIzquierda {
+    border-radius: 2% 2% 0 0;
+  }
+  .smRadiusAbajoDerecha {
+    border-radius: 0% 0% 2% 2%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  /*INDEX.HTML*/
+  .smNoVer {
+    display: inline-block; /*CHEQUEARLO*/
+  }
+  .mdNoVer {
+    display: none;
+  }
+  .grilla {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    grid-template-areas:
+      "titulo     titulo"
+      "texto      texto"
+      "imagenes   imagenes";
+  }
+  /*GALERIA.HTML*/
+  .transformacion {
+    transform: none;
+  }
+  .animacion {
+    animation: none;
+  }
+  .animacion2 {
+    animation: none;
+  }
+  .radiusArribaIzquierda {
+    border-radius: 0%;
+  }
+  .radiusAbajoDerecha {
+    border-radius: 0%;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  /*INDEX.HTML*/
+  .grilla {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    grid-template-areas:
+      "titulo     titulo"
+      "texto      imagenes";
+  }
+  .lgNoVer {
+    display: none;
+  }
+  .radiusArribaDerecha {
+    border-radius: 0%;
+  }
+  /*GALERIA.HTML*/
+  .radiusArribaIzquierda {
+    border-radius: 0%;
+  }
+  .radiusAbajoDerecha {
+    border-radius: 0%;
+  }
+  .radiusAbajoIzquierda {
+    border-radius: 0%;
+  }
+}
