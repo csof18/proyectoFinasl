@@ -1,0 +1,306 @@
+@import "mediaQueries.scss";
+/*RESETEO*/
+* {
+    margin: 0;
+    padding: 0;
+  }
+  :root{
+    font-size: 10px;
+  }
+  /*FONDO*/
+  body {
+    background-color: rgba(0, 0, 0, 0.856);
+    color: white;
+    font-size: 2rem;
+    width: 100%; /*ancho*/
+    height: 100vh; /*alto*/
+    text-align: justify;
+    font-family: "Nunito", sans-serif;
+  }
+    
+  /* ETIQUETAS*/
+  header{
+    box-shadow: 2pt 2pt 10pt #000000d0;
+  }
+  h1{
+    font-size: 4rem;
+  }
+  h2, h3{
+    margin-left: 4pt;
+    font-size: 3rem;
+  }
+  p {
+    font-style: italic;
+    font-size: 2rem
+  }
+  
+  /*CLASE GENERICA*/
+  .bloque {
+    display: block;
+  }
+  .tamaño{
+    font-size: 3rem;
+  }
+  /*mapa del indeh envios*/
+  iframe {
+    width: 100%;
+  }
+  
+  /*HEADER*/
+  #imgLogo {
+    border-radius: 5%;
+    box-shadow: 1pt 1pt 2pt #ffffffd0;
+    width: 150pt;
+    height: 150pt;
+    margin: 5%;
+  }
+  nav {
+    font-style: italic;
+    font-weight: 200;
+    text-align: right;
+    font-size: 2rem;
+  }
+  nav a {
+    outline: none;
+    text-decoration: none;
+    padding: 2pt 1pt 0;
+    transition: all 2s;
+  }
+  nav a:link {
+    color: rgba(255, 255, 255, 0.959);
+  }
+  nav a:visited {
+    color: rgba(171, 208, 214, 0.644);
+  }
+  nav a:hover {
+    color: rgb(107, 102, 102);
+    text-decoration: none;
+    margin-left: -5pt;
+    margin-top: 10pt;
+  }
+  .lista {
+    list-style: none;
+  }
+  
+  /*BOX MODEL*/
+  .navFlotante {
+    float: left;
+  }
+  nav ul {
+    list-style-type: none;
+    margin-top: -5px;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+  }
+  li a {
+    display: block;
+    padding: 10px;
+  }
+  
+  /*GRID*/
+  #contenedor {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr;
+    grid-row-gap: 5pt;
+    grid-template-areas:
+      "logo           menu"
+      "encabezado     encabezado";
+    justify-content: start;
+    align-content: stretch;
+  }
+  
+  /*GRID LOGO + NAV HTML SECUNDARIOS*/
+  .contenedorHeader {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 2fr;
+    grid-row-gap: 5pt;
+    grid-template-areas: "logo   menu";
+    justify-content: start;
+    align-content: stretch;
+  }
+  .logo {
+    grid-area: logo;
+    justify-self: start;
+    align-self: start;
+    margin: 2%;
+  }
+  .menu {
+    grid-area: menu;
+  }
+  .encabezado {
+    grid-area: encabezado;
+  }
+  /*TERMINA EL HEADER*/
+  
+  /*SECCION 1 DEL INDEX CON GRID*/
+  /*div padre, de toda la seccion*/
+  .grilla {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    grid-template-areas:
+      "titulo     titulo"
+      "texto      imagenes";
+  }
+  .titulo {
+    grid-area: titulo;
+  }
+  .texto {
+    grid-area: texto;
+    justify-self: start;
+    align-self: start;
+  }
+  .imagenes {
+    grid-area: imagenes;
+    justify-self: start;
+    align-self: start;
+  }
+  
+  /*div secundario el padre de las imagenes nada mas*/
+  .grillaImagenes {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(2, 2fr);
+    grid-template-areas:
+      "imgArriba          imgArriba"
+      "abajoIzquierda     abajoDerecha";
+    justify-self: center;
+  }
+  .imgArriba {
+    grid-area: imgArriba;
+    justify-self: start;
+    align-self: start;
+  }
+  .imgArriba img {
+    width: 400pt;
+    height: 200pt;
+  }
+  .abajoIzquierda {
+    grid-area: abajoIzquierda;
+    justify-self: start;
+    align-self: start;
+  }
+  .abajoIzquierda img {
+    width: 200pt;
+    height: 200pt;
+  }
+  .abajoDerecha {
+    grid-area: abajoDerecha;
+    justify-self: start;
+    align-self: start;
+  }
+  .abajoDerecha img {
+    width: 200pt;
+    height: 200pt;
+  }
+  
+  /*TERMINA LA SECCION 1 CON GRID*/
+  
+  /*SEGUNDA SECCION INDEX*/
+  .conjuntoImagenes{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  /*DESTACADOS DEL HTML GALERIA*/
+  
+  /*TRANSFORMACIONES*/
+  .transformacion{
+    transform: translateY(50px);
+  }
+  /*FLEXBOX*/
+  .tamañoDiv {
+    width: 250px;
+    height: 250px;
+  }
+  .filaFlex {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: center;
+  }
+  .contenedorFlex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  
+  /*IMAGENES*/
+  
+  /*TAMAÑO DE IMAGENES*/
+  .tamañoGaleria {
+    width: 200pt;
+    height: 300pt;
+  }
+  .tamañoDestacados {
+    width: 200pt;
+    height: 200pt;
+  }
+  .tamañoTrabajos {
+    width: 350pt;
+    height: 250pt;
+  }
+  .tamañoImg {
+    width: 120pt;
+    height: 250pt;
+  }
+  
+  /*EFECTOS*/
+  .radiusIzquierdo {
+    border-radius: 2% 0 0 2%;
+  }
+  .radiusArribaIzquierda {
+    border-radius: 2% 0 0 0;
+  }
+  .radiusArribaDerecha {
+    border-radius: 0 2% 0 0;
+  }
+  .radiusAbajoDerecha {
+    border-radius: 0 0 2% 0;
+  }
+  .radiusAbajoIzquierda {
+    border-radius: 0 0 0 2%;
+  }
+  .sombra {
+    box-shadow: 2pt 2pt 10pt #ffffffd0;
+  }
+  
+  /*CUADRO DE DIALOGO/CALCULAR ENVÍO*/
+  .cuadroDialogo{
+    color: black;
+  }
+  
+  /*FOOTER*/
+  .redesSociales a {
+    text-decoration: none;
+    color: white;
+    transition-duration: 3s;
+  }
+  footer a:link {
+    color: rgba(255, 255, 255, 0.774);
+  }
+  footer a:hover {
+    color: rgba(143, 140, 140, 0.671);
+    margin-left: 15pt;
+    margin-top: 10pt;
+  }
+  .iconos {
+    margin: 0 10%;
+    padding: 1%;
+    display: inline-block;
+  }
+  .footerPegado {
+    position: sticky;
+  }
+  
+  /*flexbox*/
+  .flexFooter {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+  
