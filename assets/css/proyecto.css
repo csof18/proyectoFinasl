@@ -210,74 +210,6 @@ li a {
 .transformacion{
   transform: translateY(50px);
 }
-/*ANIMACION*/
-.animacion{
-  animation-name: efecto;
-  animation-iteration-count: 1; /*le pongo cuantas veces quiero que se repita*/
-  animation-timing-function: linear;
-  animation-duration: 4s; /*cuanto quiero que dure*/
-  animation-delay: 2s; /*cuando quiero que arranque la animacion*/
-}
-/*Linea del tiempo de la animacion*/
-@keyframes efecto{
-  0% {width: 250px;
-      height: 250px;
-  }
-  25%{
-      width: 325px;
-      height: 325px;
-  }
-  50%{
-      width: 300px;
-      height: 300px;
-      border-radius: 3%;
-      box-shadow: 2pt 2pt 10pt #ffffffd0;
-  }
-  75%{
-      width: 325px;
-      height: 325px;
-      border-radius: 3%;
-      box-shadow: 2pt 2pt 10pt #ffffffd0;
-  }
-  100%{
-      width: 250px;
-      height: 250px;
-  }
-}
-.animacion2{
-  animation-name: efecto2;
-  animation-iteration-count: 1; /*le pongo cuantas veces quiero que se repita*/
-  animation-timing-function: linear;
-  animation-duration: 4s; /*cuanto quiero que dure*/
-  animation-delay: 4s; /*cuando quiero que arranque la animacion*/
-}
-/*Linea del tiempo de la animacion*/
-@keyframes efecto2{
-  0% {width: 250px;
-      height: 250px;
-  }
-  25%{
-      width: 200px;
-      height: 200px;
-  }
-  50%{
-      width: 150px;
-      height: 150px;
-      border-radius: 3%;
-      box-shadow: 2pt 2pt 10pt #ffffffd0;
-  }
-  75%{
-      width: 200px;
-      height: 200px;
-      border-radius: 3%;
-      box-shadow: 2pt 2pt 10pt #ffffffd0;
-  }
-  100%{
-      width: 250px;
-      height: 250px;
-  }
-}
-
 /*FLEXBOX*/
 .tamañoDiv {
   width: 250px;
@@ -369,7 +301,4 @@ footer a:hover {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-}
-.pruebagit{
-  font-size: 20pt;
 }
