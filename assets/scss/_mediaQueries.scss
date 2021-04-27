@@ -72,10 +72,6 @@
       "imagenes   imagenes";
   }
   /*GALERIA.HTML*/
-  .transformacion {
-    transform: none;
-  }
-  
   .radiusArribaIzquierda {
     border-radius: 0%;
   }
@@ -109,7 +105,7 @@
   .radiusAbajoIzquierda {
     border-radius: 0%;
   }
-
+  
   /*mapa + each*/
   $colores:(
     gray-500: #adb5bd,
@@ -121,6 +117,7 @@
   @each $colorDestacados, $valorColor in $colores {
     .destacado-#{$colorDestacados}{
       background-color: #{$valorColor};
+      box-shadow: 2pt 2pt 3pt #212529;
     }
   };
 }

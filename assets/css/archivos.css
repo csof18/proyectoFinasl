@@ -1,4 +1,97 @@
 @charset "UTF-8";
+/*MEDIA QUERIES*/
+@media (max-width: 767px) {
+  /*HEADER/MENU*/
+  p {
+    margin-right: 3%; }
+  .navFlotante {
+    float: none; }
+  nav {
+    font-family: "Nunito", sans-serif;
+    font-style: italic;
+    font-weight: 200;
+    text-align: justify;
+    font-size: 14pt; }
+  /*FOOTER*/
+  .iconos {
+    margin: 0pt 10pt 0pt 10pt; }
+  /*INDEX.HTML*/
+  .grilla {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    grid-template-areas: "titulo     titulo" "texto      texto" "imagenes   imagenes"; }
+  .imagenes {
+    display: none; }
+  .smNoVer {
+    display: none; }
+  .radiusAbajoIzquierda {
+    border-radius: 0%; }
+  .sinRadius {
+    border-radius: 0%; }
+  /*GALERIA.HTML*/
+  .transformacion {
+    transform: none; }
+  .tamañoDiv {
+    height: auto; }
+  .smRadiusArribaIzquierda {
+    border-radius: 2% 2% 0 0; }
+  .smRadiusAbajoDerecha {
+    border-radius: 0% 0% 2% 2%; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /*INDEX.HTML*/
+  .smNoVer {
+    display: inline-block;
+    /*CHEQUEARLO*/ }
+  .mdNoVer {
+    display: none; }
+  .grilla {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    grid-template-areas: "titulo     titulo" "texto      texto" "imagenes   imagenes"; }
+  /*GALERIA.HTML*/
+  .radiusArribaIzquierda {
+    border-radius: 0%; }
+  .radiusAbajoDerecha {
+    border-radius: 0%; } }
+
+@media (min-width: 992px) {
+  /*INDEX.HTML*/
+  .grilla {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    grid-template-areas: "titulo     titulo" "texto      imagenes"; }
+  .lgNoVer {
+    display: none; }
+  .radiusArribaDerecha {
+    border-radius: 0%; }
+  /*GALERIA.HTML*/
+  .radiusArribaIzquierda {
+    border-radius: 0%; }
+  .radiusAbajoDerecha {
+    border-radius: 0%; }
+  .radiusAbajoIzquierda {
+    border-radius: 0%; }
+  /*mapa + each*/
+  .destacado-gray-500 {
+    background-color: #adb5bd;
+    box-shadow: 2pt 2pt 3pt #212529; }
+  .destacado-gray-600 {
+    background-color: #6c757d;
+    box-shadow: 2pt 2pt 3pt #212529; }
+  .destacado-gray-700 {
+    background-color: #495057;
+    box-shadow: 2pt 2pt 3pt #212529; }
+  .destacado-gray-800 {
+    background-color: #343a40;
+    box-shadow: 2pt 2pt 3pt #212529; }
+  .destacado-gray-900 {
+    background-color: #212529;
+    box-shadow: 2pt 2pt 3pt #212529; } }
+
 /*RECETEO*/
 * {
   margin: 0;
@@ -28,7 +121,6 @@ h1 {
   font-size: 4rem; }
 
 h2, h3 {
-  margin-left: 4pt;
   font-size: 3rem; }
 
 p {
@@ -37,7 +129,7 @@ p {
 
 /*FONDO*/
 body {
-  background-color: rgba(0, 0, 0, 0.856);
+  background-color: aqua;
   color: white;
   font-size: 2rem;
   width: 100%;
@@ -124,10 +216,6 @@ li a {
 
 .encabezado {
   grid-area: encabezado; }
-
-/*TRANSFORMACIONES*/
-.transformacion {
-  transform: translateY(50px); }
 
 /*FLEXBOX*/
 .tamañoDiv {

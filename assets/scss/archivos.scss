@@ -1,3 +1,4 @@
+@import "mediaQueries.scss";
 /*RECETEO*/
 *{
   margin: 0;
@@ -6,6 +7,7 @@
 :root{
   font-size: 10px;
 }
+$colorFondo:rgba(0, 0, 0, 0.856);
 $radius:(
     ArribaDerecha:0% 5% 0% 0%,
     ArribaIzquierda:5% 0% 0% 0%,
@@ -26,7 +28,6 @@ h1{
   font-size: 4rem;
 }
 h2, h3{
-  margin-left: 4pt;
   font-size: 3rem;
 }
 p {
@@ -35,7 +36,7 @@ p {
 }
 /*FONDO*/
 body {
-  background-color: rgba(0, 0, 0, 0.856);
+  background-color: aqua;
   color: white;
   font-size: 2rem;
   width: 100%; /*ancho*/
@@ -130,10 +131,6 @@ nav {
 }
 .encabezado {
   grid-area: encabezado;
-}
-/*TRANSFORMACIONES*/
-.transformacion{
-  transform: translateY(50px);
 }
 /*FLEXBOX*/
 .tamañoDiv {
