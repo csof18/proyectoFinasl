@@ -13,8 +13,8 @@
     text-align: justify;
     font-size: 14pt; }
   /*FOOTER*/
-  .iconos {
-    margin: 0pt 10pt 0pt 10pt; }
+  .redesSociales__iconos {
+    margin: 0 5%; }
   /*INDEX.HTML*/
   .grilla {
     display: grid;
@@ -78,19 +78,19 @@
   /*mapa + each*/
   .destacado-gray-500 {
     background-color: #adb5bd;
-    box-shadow: 2pt 2pt 3pt #212529; }
+    box-shadow: 2pt 2pt 3pt #3c3d3d; }
   .destacado-gray-600 {
     background-color: #6c757d;
-    box-shadow: 2pt 2pt 3pt #212529; }
+    box-shadow: 2pt 2pt 3pt #3c3d3d; }
   .destacado-gray-700 {
     background-color: #495057;
-    box-shadow: 2pt 2pt 3pt #212529; }
+    box-shadow: 2pt 2pt 3pt #3c3d3d; }
   .destacado-gray-800 {
     background-color: #343a40;
-    box-shadow: 2pt 2pt 3pt #212529; }
+    box-shadow: 2pt 2pt 3pt #3c3d3d; }
   .destacado-gray-900 {
-    background-color: #212529;
-    box-shadow: 2pt 2pt 3pt #212529; } }
+    background-color: #24282c;
+    box-shadow: 2pt 2pt 3pt #3c3d3d; } }
 
 /*RECETEO*/
 * {
@@ -120,16 +120,22 @@ header {
 h1 {
   font-size: 4rem; }
 
-h2, h3 {
+h2 {
+  font-size: 3rem; }
+
+h3 {
   font-size: 3rem; }
 
 p {
   font-style: italic;
   font-size: 2rem; }
 
+.destacadoH3 {
+  font-size: 2.5rem; }
+
 /*FONDO*/
 body {
-  background-color: aqua;
+  background-color: rgba(0, 0, 0, 0.856);
   color: white;
   font-size: 2rem;
   width: 100%;

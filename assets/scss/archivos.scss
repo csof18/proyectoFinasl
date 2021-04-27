@@ -20,6 +20,7 @@ $radius:(
         border-radius: #{$valor};
     }
 };
+
 /* ETIQUETAS*/
 header{
   box-shadow: 2pt 2pt 10pt #000000d0;
@@ -27,16 +28,22 @@ header{
 h1{
   font-size: 4rem;
 }
-h2, h3{
+h2{
+  font-size: 3rem;
+}
+h3{
   font-size: 3rem;
 }
 p {
   font-style: italic;
   font-size: 2rem;
 }
+.destacadoH3{
+  font-size: 2.5rem;
+}
 /*FONDO*/
 body {
-  background-color: aqua;
+  background-color: $colorFondo;
   color: white;
   font-size: 2rem;
   width: 100%; /*ancho*/

@@ -15,8 +15,9 @@
     font-size: 14pt;
   }
   /*FOOTER*/
-  .iconos {
-    margin: 0pt 10pt 0pt 10pt;
+  .redesSociales__iconos{
+    margin: 0 5%;
+    
   }
   /*INDEX.HTML*/
   .grilla {
@@ -112,12 +113,12 @@
     gray-600: #6c757d,
     gray-700: #495057,
     gray-800: #343a40,
-    gray-900: #212529
+    gray-900: #24282c
   );
   @each $colorDestacados, $valorColor in $colores {
     .destacado-#{$colorDestacados}{
       background-color: #{$valorColor};
-      box-shadow: 2pt 2pt 3pt #212529;
+      box-shadow: 2pt 2pt 3pt #3c3d3d;
     }
   };
 }
