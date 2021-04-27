@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*RECETEO*/
 * {
   margin: 0;
@@ -82,3 +83,37 @@ nav ul {
 li a {
   display: block;
   padding: 10px; }
+
+/*TAMAÑO DE IMAGENES*/
+.tamañoGaleria {
+  width: 200pt;
+  height: 300pt; }
+
+.tamañoDestacados {
+  width: 200pt;
+  height: 200pt; }
+
+/*FOOTER*/
+.redesSociales a {
+  text-decoration: none;
+  color: white;
+  transition-duration: 3s; }
+
+footer a:link {
+  color: rgba(255, 255, 255, 0.774); }
+
+footer a:hover {
+  color: rgba(143, 140, 140, 0.671);
+  margin-left: 15pt;
+  margin-top: 10pt; }
+
+.iconos {
+  margin: 0 10%;
+  padding: 1%;
+  display: inline-block; }
+
+/*flexbox*/
+.flexFooter {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center; }
