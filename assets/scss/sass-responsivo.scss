@@ -1,0 +1,46 @@
+/*RECETEO*/
+*{
+    margin: 0;
+    padding: 0;
+  }
+  :root{
+    font-size: 10px;
+  }
+  /* ETIQUETAS*/
+  header{
+    box-shadow: 2pt 2pt 10pt #000000d0;
+  }
+  h1{
+    font-size: 4rem;
+  }
+  h2{
+    font-size: 3rem;
+  }
+  h3{
+    font-size: 3rem;
+  }
+  p {
+    font-style: italic;
+    font-size: 2rem;
+  }
+  /*FONDO*/
+  body {
+    background-color: $colorFondo;
+    color: white;
+    font-size: 2rem;
+    width: 100%; /*ancho*/
+    height: 100vh; /*alto*/
+    text-align: justify;
+    font-family: "Nunito", sans-serif;
+  }
+  /*HEADER*/
+  #imgLogo {
+    border-radius: 5%;
+    box-shadow: 1pt 1pt 2pt #ffffffd0;
+    width: 150pt;
+    height: 150pt;
+    margin: 5%;
+  }
+@media (max-widht:767px){
+
+}
