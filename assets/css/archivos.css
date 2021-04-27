@@ -7,6 +7,19 @@
 :root {
   font-size: 10px; }
 
+/*EACH*/
+.radiusArribaDerecha {
+  border-radius: 0% 5% 0% 0%; }
+
+.radiusArribaIzquierda {
+  border-radius: 5% 0% 0% 0%; }
+
+.radiusAbajoDerecha {
+  border-radius: 0% 0% 5% 0%; }
+
+.radiusAbajoIzquierda {
+  border-radius: 0% 0% 0% 5%; }
+
 /* ETIQUETAS*/
 header {
   box-shadow: 2pt 2pt 10pt #000000d0; }
@@ -84,6 +97,59 @@ li a {
   display: block;
   padding: 10px; }
 
+/*GRID*/
+#contenedor {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 2fr;
+  grid-row-gap: 5pt;
+  grid-template-areas: "logo           menu" "encabezado     encabezado";
+  justify-content: start;
+  align-content: stretch; }
+
+/*GRID LOGO + NAV HTML SECUNDARIOS*/
+.contenedorHeader {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 2fr;
+  grid-row-gap: 5pt;
+  grid-template-areas: "logo   menu";
+  justify-content: start;
+  align-content: stretch; }
+
+.logo {
+  grid-area: logo;
+  justify-self: start;
+  align-self: start;
+  margin: 2%; }
+
+.menu {
+  grid-area: menu; }
+
+.encabezado {
+  grid-area: encabezado; }
+
+/*TRANSFORMACIONES*/
+.transformacion {
+  transform: translateY(50px); }
+
+/*FLEXBOX*/
+.tamañoDiv {
+  width: 250px;
+  height: 250px; }
+
+.filaFlex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center; }
+
+.contenedorFlex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between; }
+
 /*TAMAÑO DE IMAGENES*/
 .tamañoGaleria {
   width: 200pt;
@@ -94,26 +160,22 @@ li a {
   height: 200pt; }
 
 /*FOOTER*/
-.redesSociales a {
-  text-decoration: none;
-  color: white;
-  transition-duration: 3s; }
-
-footer a:link {
-  color: rgba(255, 255, 255, 0.774); }
-
-footer a:hover {
-  color: rgba(143, 140, 140, 0.671);
-  margin-left: 15pt;
-  margin-top: 10pt; }
-
-.iconos {
-  margin: 0 10%;
-  padding: 1%;
-  display: inline-block; }
-
-/*flexbox*/
-.flexFooter {
+.redesSociales {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center; }
+  .redesSociales a {
+    text-decoration: none;
+    color: white;
+    transition-duration: 3s; }
+  .redesSociales a:link {
+    color: rgba(255, 255, 255, 0.774); }
+  .redesSociales a:hover {
+    color: rgba(143, 140, 140, 0.671);
+    margin-left: 15pt;
+    margin-top: 10pt; }
+
+.redesSociales__iconos {
+  margin: 0 10%;
+  padding: 1%;
+  display: inline-block; }
