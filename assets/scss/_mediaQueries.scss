@@ -44,12 +44,6 @@
   .transformacion {
     transform: none;
   }
-  .animacion {
-    animation: none;
-  }
-  .animacion2 {
-    animation: none;
-  }
   .tamañoDiv {
     height: auto;
   }
@@ -81,12 +75,7 @@
   .transformacion {
     transform: none;
   }
-  .animacion {
-    animation: none;
-  }
-  .animacion2 {
-    animation: none;
-  }
+  
   .radiusArribaIzquierda {
     border-radius: 0%;
   }
@@ -94,7 +83,7 @@
     border-radius: 0%;
   }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px){
   /*INDEX.HTML*/
   .grilla {
     display: grid;
