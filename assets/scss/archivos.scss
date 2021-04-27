@@ -1,5 +1,3 @@
-@import "mediaQueries.scss";
-/*RECETEO*/
 *{
   margin: 0;
   padding: 0;
@@ -7,20 +5,6 @@
 :root{
   font-size: 10px;
 }
-$colorFondo:rgba(0, 0, 0, 0.856);
-$radius:(
-    ArribaDerecha:0% 5% 0% 0%,
-    ArribaIzquierda:5% 0% 0% 0%,
-    AbajoDerecha:0% 0% 5% 0%,
-    AbajoIzquierda:0% 0% 0% 5%
-);
-/*EACH*/
-@each $redondeo, $valor in $radius {
-    .radius#{$redondeo}{
-        border-radius: #{$valor};
-    }
-};
-
 /* ETIQUETAS*/
 header{
   box-shadow: 2pt 2pt 10pt #000000d0;
@@ -43,7 +27,7 @@ p {
 }
 /*FONDO*/
 body {
-  background-color: $colorFondo;
+  background-color: rgb(49, 47, 47);
   color: white;
   font-size: 2rem;
   width: 100%; /*ancho*/
@@ -59,51 +43,6 @@ body {
   height: 150pt;
   margin: 5%;
 }
-nav {
-  font-style: italic;
-  font-weight: 200;
-  text-align: right;
-  font-size: 2rem;
-  a {
-    outline: none;
-    text-decoration: none;
-    padding: 2pt 1pt 0;
-    transition: all 2s;
-  }
-    a:link {
-      color: rgba(255, 255, 255, 0.959);
-    }
-    a:visited {
-      color: rgba(171, 208, 214, 0.644);
-    }
-    a:hover {
-      color: rgb(107, 102, 102);
-      text-decoration: none;
-      margin-left: -5pt;
-      margin-top: 10pt;
-    }
-}
-  ul {
-    list-style-type: none;
-    margin-top: -5px;
-    padding: 0;
-    overflow: hidden;
-    float: right;
-  }
-    li a {
-      display: block;
-      padding: 10px;
-    }
-  
-  .lista {
-    list-style: none;
-  }
-/*BOX MODEL*/
-  .navFlotante {
-    float: left;
-  }
-
-  
 /*GRID*/
 #contenedor {
   display: grid;
@@ -165,7 +104,6 @@ nav {
   width: 200pt;
   height: 200pt;
 }
-/*FOOTER*/
 .redesSociales{
   display: flex;
   flex-flow: row nowrap;
@@ -184,8 +122,57 @@ nav {
     margin-top: 10pt;
   }
 }
-.redesSociales__iconos {
-  margin: 0 10%;
-  padding: 1%;
-  display: inline-block;
+@media (max-width: 767px){
+  nav {
+    font-style: italic;
+    font-weight: 200;
+    text-align: right;
+    font-size: 2rem;
+    a {
+      outline: none;
+      text-decoration: none;
+      padding: 2pt 1pt 0;
+      transition: all 2s;
+    }
+      a:link {
+        color: rgba(255, 255, 255, 0.959);
+      }
+      a:visited {
+        color: rgba(171, 208, 214, 0.644);
+      }
+      a:hover {
+        color: rgb(107, 102, 102);
+        text-decoration: none;
+        margin-left: -5pt;
+        margin-top: 10pt;
+      }
+  }
+    ul {
+      list-style-type: none;
+      margin-top: -5px;
+      padding: 0;
+      overflow: hidden;
+      float: right;
+    }
+      li a {
+        display: block;
+        padding: 10px;
+      }
+    
+    .lista {
+      list-style: none;
+    }
+    /*FOOTER*/
+  .redesSociales__iconos{
+    margin: 0 5%;
+  }
+  .tamañoDiv {
+    height: auto;
+  }
+  .smRadiusArribaIzquierda {
+    border-radius: 2% 2% 0 0;
+  }
+  .smRadiusAbajoDerecha {
+    border-radius: 0% 0% 2% 2%;
+  }
 }
