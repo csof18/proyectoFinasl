@@ -31,7 +31,7 @@ h2, h3{
 }
 p {
   font-style: italic;
-  font-size: 2rem
+  font-size: 2rem;
 }
 /*FONDO*/
 body {
@@ -56,25 +56,37 @@ nav {
   font-weight: 200;
   text-align: right;
   font-size: 2rem;
-}
-  nav a {
+  a {
     outline: none;
     text-decoration: none;
     padding: 2pt 1pt 0;
     transition: all 2s;
   }
-  nav a:link {
-    color: rgba(255, 255, 255, 0.959);
+    a:link {
+      color: rgba(255, 255, 255, 0.959);
+    }
+    a:visited {
+      color: rgba(171, 208, 214, 0.644);
+    }
+    a:hover {
+      color: rgb(107, 102, 102);
+      text-decoration: none;
+      margin-left: -5pt;
+      margin-top: 10pt;
+    }
+}
+  ul {
+    list-style-type: none;
+    margin-top: -5px;
+    padding: 0;
+    overflow: hidden;
+    float: right;
   }
-  nav a:visited {
-    color: rgba(171, 208, 214, 0.644);
-  }
-  nav a:hover {
-    color: rgb(107, 102, 102);
-    text-decoration: none;
-    margin-left: -5pt;
-    margin-top: 10pt;
-  }
+    li a {
+      display: block;
+      padding: 10px;
+    }
+  
   .lista {
     list-style: none;
   }
@@ -82,17 +94,8 @@ nav {
   .navFlotante {
     float: left;
   }
-nav ul {
-  list-style-type: none;
-  margin-top: -5px;
-  padding: 0;
-  overflow: hidden;
-  float: right;
-}
-  li a {
-    display: block;
-    padding: 10px;
-  }
+
+  
 /*GRID*/
 #contenedor {
   display: grid;
