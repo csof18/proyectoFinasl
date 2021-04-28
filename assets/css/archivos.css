@@ -119,43 +119,80 @@ body {
     margin-left: 15pt;
     margin-top: 10pt; }
 
+nav {
+  font-style: italic;
+  font-weight: 200;
+  text-align: right;
+  font-size: 2rem; }
+  nav a {
+    outline: none;
+    text-decoration: none;
+    padding: 2pt 1pt 0;
+    transition: all 2s; }
+  nav a:link {
+    color: rgba(255, 255, 255, 0.959); }
+  nav a:visited {
+    color: rgba(171, 208, 214, 0.644); }
+  nav a:hover {
+    color: #6b6666;
+    text-decoration: none;
+    margin-left: -5pt;
+    margin-top: 10pt; }
+
+ul {
+  list-style-type: none;
+  margin-top: -5px;
+  padding: 0;
+  overflow: hidden;
+  float: right; }
+
+li a {
+  display: block;
+  padding: 10px; }
+
+.lista {
+  list-style: none; }
+
 @media (max-width: 767px) {
-  nav {
-    font-style: italic;
-    font-weight: 200;
-    text-align: right;
-    font-size: 2rem; }
-    nav a {
-      outline: none;
-      text-decoration: none;
-      padding: 2pt 1pt 0;
-      transition: all 2s; }
-    nav a:link {
-      color: rgba(255, 255, 255, 0.959); }
-    nav a:visited {
-      color: rgba(171, 208, 214, 0.644); }
-    nav a:hover {
-      color: #6b6666;
-      text-decoration: none;
-      margin-left: -5pt;
-      margin-top: 10pt; }
-  ul {
-    list-style-type: none;
-    margin-top: -5px;
-    padding: 0;
-    overflow: hidden;
-    float: right; }
-  li a {
-    display: block;
-    padding: 10px; }
-  .lista {
-    list-style: none; }
   /*FOOTER*/
   .redesSociales__iconos {
     margin: 0 5%; }
   .tamañoDiv {
-    height: auto; }
-  .smRadiusArribaIzquierda {
-    border-radius: 2% 2% 0 0; }
-  .smRadiusAbajoDerecha {
-    border-radius: 0% 0% 2% 2%; } }
+    height: auto; } }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /*NAVEGADOR*/
+  .navFlotante {
+    float: left; }
+  .bordeRedondeado img {
+    border-radius: 2%; }
+  /*FOOTER*/
+  .redesSociales__iconos {
+    margin: 0 10%;
+    padding: 1%;
+    display: inline-block; } }
+
+@media (min-width: 992px) {
+  /*NAVEGADOR*/
+  .navFlotante {
+    float: left; }
+  .destacado-gray-500 {
+    background-color: #adb5bd;
+    box-shadow: 2pt 2pt 3pt #3c3d3d; }
+  .destacado-gray-600 {
+    background-color: #6c757d;
+    box-shadow: 2pt 2pt 3pt #3c3d3d; }
+  .destacado-gray-700 {
+    background-color: #495057;
+    box-shadow: 2pt 2pt 3pt #3c3d3d; }
+  .destacado-gray-800 {
+    background-color: #343a40;
+    box-shadow: 2pt 2pt 3pt #3c3d3d; }
+  .destacado-gray-900 {
+    background-color: #24282c;
+    box-shadow: 2pt 2pt 3pt #3c3d3d; }
+  /*FOOTER*/
+  .redesSociales__iconos {
+    margin: 0 10%;
+    padding: 1%;
+    display: inline-block; } }
