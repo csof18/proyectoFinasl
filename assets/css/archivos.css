@@ -52,7 +52,8 @@ body {
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 2fr;
   grid-row-gap: 5pt;
-  grid-template-areas: "logo           menu" "encabezado     encabezado";
+  grid-template-areas: "logo           menu"
+ "encabezado     encabezado";
   justify-content: start;
   align-content: stretch; }
 
