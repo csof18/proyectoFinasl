@@ -1,48 +1,191 @@
+@import "mediaQueries.scss";
 /*RECETEO*/
 *{
-    margin: 0;
-    padding: 0;
-  }
-  :root{
-    font-size: 10px;
-  }
-  /* ETIQUETAS*/
-  header{
-    box-shadow: 2pt 2pt 10pt #000000d0;
-  }
-  h1{
-    font-size: 4rem;
-  }
-  h2{
-    font-size: 3rem;
-  }
-  h3{
-    font-size: 3rem;
-  }
-  p {
-    font-style: italic;
-    font-size: 2rem;
-  }
-  /*FONDO*/
-  body {
-    background-color: $colorFondo;
-    color: white;
-    font-size: 2rem;
-    width: 100%; /*ancho*/
-    height: 100vh; /*alto*/
-    text-align: justify;
-    font-family: "Nunito", sans-serif;
-  }
-  /*HEADER*/
-  #imgLogo {
-    border-radius: 5%;
-    box-shadow: 1pt 1pt 2pt #ffffffd0;
-    width: 150pt;
-    height: 150pt;
-    margin: 5%;
-  }
-@media (max-widht:767px){
-    body{
-        color: aqua;
+  margin: 0;
+  padding: 0;
+}
+:root{
+  font-size: 10px;
+}
+$colorFondo:rgba(0, 0, 0, 0.856);
+$radius:(
+    ArribaDerecha:0% 5% 0% 0%,
+    ArribaIzquierda:5% 0% 0% 0%,
+    AbajoDerecha:0% 0% 5% 0%,
+    AbajoIzquierda:0% 0% 0% 5%
+);
+/*EACH*/
+@each $redondeo, $valor in $radius {
+    .radius#{$redondeo}{
+        border-radius: #{$valor};
     }
+};
+
+/* ETIQUETAS*/
+header{
+  box-shadow: 2pt 2pt 10pt #000000d0;
+}
+h1{
+  font-size: 4rem;
+}
+h2{
+  font-size: 3rem;
+}
+h3{
+  font-size: 3rem;
+}
+p {
+  font-style: italic;
+  font-size: 2rem;
+}
+.destacadoH3{
+  font-size: 2.5rem;
+}
+/*FONDO*/
+body {
+  background-color: $colorFondo;
+  color: white;
+  font-size: 2rem;
+  width: 100%; /*ancho*/
+  height: 100vh; /*alto*/
+  text-align: justify;
+  font-family: "Nunito", sans-serif;
+}
+/*HEADER*/
+#imgLogo {
+  border-radius: 5%;
+  box-shadow: 1pt 1pt 2pt #ffffffd0;
+  width: 150pt;
+  height: 150pt;
+  margin: 5%;
+}
+nav {
+  font-style: italic;
+  font-weight: 200;
+  text-align: right;
+  font-size: 2rem;
+  a {
+    outline: none;
+    text-decoration: none;
+    padding: 2pt 1pt 0;
+    transition: all 2s;
+  }
+    a:link {
+      color: rgba(255, 255, 255, 0.959);
+    }
+    a:visited {
+      color: rgba(171, 208, 214, 0.644);
+    }
+    a:hover {
+      color: rgb(107, 102, 102);
+      text-decoration: none;
+      margin-left: -5pt;
+      margin-top: 10pt;
+    }
+}
+  ul {
+    list-style-type: none;
+    margin-top: -5px;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+  }
+    li a {
+      display: block;
+      padding: 10px;
+    }
+  
+  .lista {
+    list-style: none;
+  }
+/*BOX MODEL*/
+  .navFlotante {
+    float: left;
+  }
+
+  
+/*GRID*/
+#contenedor {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 2fr;
+  grid-row-gap: 5pt;
+  grid-template-areas:
+    "logo           menu"
+    "encabezado     encabezado";
+  justify-content: start;
+  align-content: stretch;
+}
+
+/*GRID LOGO + NAV HTML SECUNDARIOS*/
+.contenedorHeader {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 2fr;
+  grid-row-gap: 5pt;
+  grid-template-areas: "logo   menu";
+  justify-content: start;
+  align-content: stretch;
+}
+.logo {
+  grid-area: logo;
+  justify-self: start;
+  align-self: start;
+  margin: 2%;
+}
+.menu {
+  grid-area: menu;
+}
+.encabezado {
+  grid-area: encabezado;
+}
+/*FLEXBOX*/
+.tamañoDiv {
+  width: 250px;
+  height: 250px;
+}
+.filaFlex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+.contenedorFlex {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+/*TAMAÑO DE IMAGENES*/
+.tamañoGaleria {
+  width: 200pt;
+  height: 300pt;
+}
+.tamañoDestacados {
+  width: 200pt;
+  height: 200pt;
+}
+/*FOOTER*/
+.redesSociales{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  a{
+  text-decoration: none;
+  color: white;
+  transition-duration: 3s;
+  }
+  a:link {
+    color: rgba(255, 255, 255, 0.774);
+  }
+  a:hover {
+    color: rgba(143, 140, 140, 0.671);
+    margin-left: 15pt;
+    margin-top: 10pt;
+  }
+}
+.redesSociales__iconos {
+  margin: 0 10%;
+  padding: 1%;
+  display: inline-block;
 }
