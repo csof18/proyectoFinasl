@@ -5,6 +5,7 @@
 :root{
   font-size: 10px;
 }
+$colorFondo: rgb(49, 47, 47);
 $redondeo:2%;
 /* ETIQUETAS*/
 header{
@@ -28,7 +29,7 @@ p {
 }
 /*FONDO*/
 body {
-  background-color: rgb(49, 47, 47);
+  background-color:$colorFondo;
   color: white;
   font-size: 2rem;
   width: 100%; /*ancho*/
@@ -56,7 +57,6 @@ body {
   justify-content: start;
   align-content: stretch;
 }
-
 /*GRID LOGO + NAV HTML SECUNDARIOS*/
 .contenedorHeader {
   display: grid;
@@ -147,28 +147,27 @@ nav {
     margin-top: 10pt;
   }
 }
-ul {
-  list-style-type: none;
-  margin-top: -5px;
-  padding: 0;
-  overflow: hidden;
-  float: right;
-}
-li a {
-  display: block;
-  padding: 10px;
-}
-
+  ul {
+    list-style-type: none;
+    margin-top: -5px;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+  }
+    li a {
+      display: block;
+      padding: 10px;
+    }
 .lista {
   list-style: none;
 }
 @media (max-width: 767px){
-    /*FOOTER*/
-  .redesSociales__iconos{
-    margin: 0 5%;
-  }
   .tamañoDiv {
     height: auto;
+  }
+  /*FOOTER*/
+  .redesSociales__iconos{
+    margin: 0 5%;
   }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -176,6 +175,7 @@ li a {
   .navFlotante {
     float: left;
   }
+  /*IMAGENES*/
   .bordeRedondeado{
     img{
       border-radius: $redondeo;
@@ -194,10 +194,7 @@ li a {
   .navFlotante {
     float: left;
   }
-  .redesSociales--iconos{
-    @extend .redesSociales__iconos;
-    margin: 0 10%;
-  }
+  /*DESTACADOS*/
   $colores:(
     gray-500: #adb5bd,
     gray-600: #6c757d,
@@ -217,4 +214,20 @@ li a {
     padding: 1%;
     display: inline-block;
   }
+}
+@media (min-width:1200px){
+  /*IMAGENES*/
+  $colorFondo:rgba(0, 0, 0, 0.856);
+  $radius:(
+      ArribaDerecha:0% 5% 0% 0%,
+      ArribaIzquierda:5% 0% 0% 0%,
+      AbajoDerecha:0% 0% 5% 0%,
+      AbajoIzquierda:0% 0% 0% 5%
+  );
+  /*EACH*/
+  @each $redondeo, $valor in $radius {
+      .radius#{$redondeo}{
+          border-radius: #{$valor};
+      }
+  };
 }

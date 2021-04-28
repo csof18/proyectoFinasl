@@ -154,16 +154,17 @@ li a {
   list-style: none; }
 
 @media (max-width: 767px) {
+  .tamañoDiv {
+    height: auto; }
   /*FOOTER*/
   .redesSociales__iconos {
-    margin: 0 5%; }
-  .tamañoDiv {
-    height: auto; } }
+    margin: 0 5%; } }
 
 @media (min-width: 768px) and (max-width: 991px) {
   /*NAVEGADOR*/
   .navFlotante {
     float: left; }
+  /*IMAGENES*/
   .bordeRedondeado img {
     border-radius: 2%; }
   /*FOOTER*/
@@ -176,6 +177,7 @@ li a {
   /*NAVEGADOR*/
   .navFlotante {
     float: left; }
+  /*DESTACADOS*/
   .destacado-gray-500 {
     background-color: #adb5bd;
     box-shadow: 2pt 2pt 3pt #3c3d3d; }
@@ -196,3 +198,15 @@ li a {
     margin: 0 10%;
     padding: 1%;
     display: inline-block; } }
+
+@media (min-width: 1200px) {
+  /*IMAGENES*/
+  /*EACH*/
+  .radiusArribaDerecha {
+    border-radius: 0% 5% 0% 0%; }
+  .radiusArribaIzquierda {
+    border-radius: 5% 0% 0% 0%; }
+  .radiusAbajoDerecha {
+    border-radius: 0% 0% 5% 0%; }
+  .radiusAbajoIzquierda {
+    border-radius: 0% 0% 0% 5%; } }
