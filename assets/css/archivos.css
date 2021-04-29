@@ -142,6 +142,10 @@ li a {
   width: 200pt;
   height: 200pt; }
 
+/*RESERVAS.HTML*/
+input {
+  font-size: 2rem !important; }
+
 /*ENVIOS.HTML*/
 iframe {
   width: 100%; }
