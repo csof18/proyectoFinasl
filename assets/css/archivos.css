@@ -116,60 +116,6 @@ li a {
   grid-area: encabezado; }
 
 /*INDEX.HTML*/
-/*SECCION 1 DEL INDEX CON GRID*/
-/*div padre, de toda la seccion*/
-.grilla {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  width: 100%;
-  grid-template-areas: "titulo     titulo" "texto      imagenes"; }
-
-.titulo {
-  grid-area: titulo; }
-
-.texto {
-  grid-area: texto;
-  justify-self: start;
-  align-self: start; }
-
-.imagenes {
-  grid-area: imagenes;
-  justify-self: start;
-  align-self: start; }
-
-/*div secundario el padre de las imagenes nada mas*/
-.grillaImagenes {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: repeat(2, 2fr);
-  grid-template-areas: "imgArriba          imgArriba" "abajoIzquierda     abajoDerecha";
-  justify-self: center; }
-
-.imgArriba {
-  grid-area: imgArriba;
-  justify-self: start;
-  align-self: start; }
-  .imgArriba img {
-    width: 400pt;
-    height: 200pt; }
-
-.abajoIzquierda {
-  grid-area: abajoIzquierda;
-  justify-self: start;
-  align-self: start; }
-  .abajoIzquierda img {
-    width: 200pt;
-    height: 200pt; }
-
-.abajoDerecha {
-  grid-area: abajoDerecha;
-  justify-self: start;
-  align-self: start; }
-  .abajoDerecha img {
-    width: 200pt;
-    height: 200pt; }
-
-/*TERMINA LA SECCION 1 CON GRID*/
 /*SEGUNDA SECCION INDEX*/
 .conjuntoImagenes {
   display: flex;
@@ -236,6 +182,10 @@ iframe {
     margin-top: 10pt; }
 
 @media (max-width: 767px) {
+  /*INDEX.HTML*/
+  .smNoVer {
+    display: none; }
+  /*GALERIA.HTML*/
   .tamañoDiv {
     height: auto; }
   /*FOOTER*/
@@ -246,6 +196,37 @@ iframe {
   /*NAVEGADOR*/
   .navFlotante {
     float: left; }
+  /*INDEX.HTML*/
+  .grillaImagenes {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(2, 2fr);
+    width: 100%;
+    grid-template-areas: "imgArriba          imgArriba" "abajoIzquierda     abajoDerecha";
+    justify-self: center; }
+  .imgArriba {
+    grid-area: imgArriba;
+    justify-self: center;
+    align-self: start; }
+    .imgArriba img {
+      width: 400pt;
+      height: 200pt; }
+  .abajoIzquierda {
+    grid-area: abajoIzquierda;
+    justify-self: right;
+    align-self: start; }
+    .abajoIzquierda img {
+      width: 200pt;
+      height: 200pt; }
+  .abajoDerecha {
+    grid-area: abajoDerecha;
+    justify-self: left;
+    align-self: start; }
+    .abajoDerecha img {
+      width: 200pt;
+      height: 200pt; }
+  .mdNoVer {
+    display: none; }
   /*IMAGENES*/
   .bordeRedondeado img {
     border-radius: 2%; }
@@ -259,6 +240,55 @@ iframe {
   /*NAVEGADOR*/
   .navFlotante {
     float: left; }
+  /*INDEX*/
+  /*SECCION 1 DEL INDEX CON GRID*/
+  /*div padre, de toda la seccion*/
+  .grilla {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100%;
+    grid-template-areas: "titulo     titulo" "texto      imagenes"; }
+  .titulo {
+    grid-area: titulo; }
+  .texto {
+    grid-area: texto;
+    justify-self: start;
+    align-self: start; }
+  .imagenes {
+    grid-area: imagenes;
+    justify-self: start;
+    align-self: start; }
+  /*div secundario el padre de las imagenes nada mas*/
+  .grillaImagenes {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(2, 2fr);
+    grid-template-areas: "imgArriba          imgArriba" "abajoIzquierda     abajoDerecha";
+    justify-self: center; }
+  .imgArriba {
+    grid-area: imgArriba;
+    justify-self: start;
+    align-self: start; }
+    .imgArriba img {
+      width: 400pt;
+      height: 200pt; }
+  .abajoIzquierda {
+    grid-area: abajoIzquierda;
+    justify-self: start;
+    align-self: start; }
+    .abajoIzquierda img {
+      width: 200pt;
+      height: 200pt; }
+  .abajoDerecha {
+    grid-area: abajoDerecha;
+    justify-self: start;
+    align-self: start; }
+    .abajoDerecha img {
+      width: 200pt;
+      height: 200pt; }
+  .lgNoVer {
+    display: none; }
+  /*TERMINA LA SECCION 1 CON GRID*/
   /*DESTACADOS*/
   .destacado-gray-500 {
     background-color: #adb5bd;
