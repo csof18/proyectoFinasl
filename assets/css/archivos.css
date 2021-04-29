@@ -116,7 +116,6 @@ li a {
   grid-area: encabezado; }
 
 /*INDEX.HTML*/
-/*SEGUNDA SECCION INDEX*/
 .conjuntoImagenes {
   display: flex;
   flex-wrap: wrap;
@@ -227,6 +226,7 @@ iframe {
       height: 200pt; }
   .mdNoVer {
     display: none; }
+  /*GALERIA.HTML*/
   /*IMAGENES*/
   .bordeRedondeado img {
     border-radius: 2%; }
@@ -241,8 +241,7 @@ iframe {
   .navFlotante {
     float: left; }
   /*INDEX*/
-  /*SECCION 1 DEL INDEX CON GRID*/
-  /*div padre, de toda la seccion*/
+  /*div contenedor de toda la seccion*/
   .grilla {
     display: grid;
     grid-template-columns: 40% 60%;
@@ -258,7 +257,7 @@ iframe {
     grid-area: imagenes;
     justify-self: start;
     align-self: start; }
-  /*div secundario el padre de las imagenes nada mas*/
+  /*div secundario solo imagenes*/
   .grillaImagenes {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -288,7 +287,7 @@ iframe {
       height: 200pt; }
   .lgNoVer {
     display: none; }
-  /*TERMINA LA SECCION 1 CON GRID*/
+  /*GALERIA.HTML*/
   /*DESTACADOS*/
   .destacado-gray-500 {
     background-color: #adb5bd;
@@ -312,6 +311,10 @@ iframe {
     display: inline-block; } }
 
 @media (min-width: 1200px) {
+  /*INDEX.HTML*/
+  .lgNoVer {
+    display: inline-block; }
+  /*GALERIA.HTML*/
   /*IMAGENES*/
   /*EACH*/
   .radiusArribaDerecha {
