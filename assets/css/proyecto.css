@@ -44,7 +44,9 @@ p {
 iframe {
   width: 100%;
 }
-
+.tamañoBotones{
+  font-size: 2rem !important;
+}
 /*HEADER*/
 #imgLogo {
   border-radius: 5%;
