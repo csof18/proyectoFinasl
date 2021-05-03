@@ -8,7 +8,11 @@
 $colorFondo: rgb(49, 47, 47);
 $redondeo:2%;
 $sombra:2pt 2pt 10pt #ffffffd0;
-
+$tamañoTexto2rem: 2rem;
+@mixin fuente-cursiva-2rem {
+  font-style: italic;
+  font-size: 2rem;
+}
 /* ETIQUETAS Y CLASES GENERALES*/
 header{
   box-shadow: 2pt 2pt 10pt #000000d0;
@@ -23,20 +27,19 @@ h3{
   font-size: 3rem;
 }
 p {
-  font-style: italic;
-  font-size: 2rem;
+  @include fuente-cursiva-2rem;
 }
 .destacadoH3{
   font-size: 2.5rem;
 }
 .tamañoBotones{
-  font-size: 2rem !important;
+  font-size: $tamañoTexto2rem !important;
 }
 /*FONDO*/
 body {
   background-color:$colorFondo;
   color: white;
-  font-size: 2rem;
+  font-size: $tamañoTexto2rem;
   width: 100%; /*ancho*/
   height: 100vh; /*alto*/
   text-align: justify;
@@ -51,40 +54,41 @@ body {
   margin: 5%;
 }
 nav {
-  font-style: italic;
+  @include fuente-cursiva-2rem;
   font-weight: 200;
   text-align: right;
-  font-size: 2rem;
-  a {
+  & a {
     outline: none;
     text-decoration: none;
     padding: 2pt 1pt 0;
     transition: all 2s;
+    &:link {
+      color: rgba(255, 255, 255, 0.959);
+    }
+    &:visited {
+      color: rgba(171, 208, 214, 0.644);
+    }
+    &:hover {
+      color: rgb(107, 102, 102);
+      text-decoration: none;
+      margin-left: -5pt;
+      margin-top: 10pt;
+    }
   }
-  a:link {
-    color: rgba(255, 255, 255, 0.959);
-  }
-  a:visited {
-    color: rgba(171, 208, 214, 0.644);
-  }
-  a:hover {
-    color: rgb(107, 102, 102);
-    text-decoration: none;
-    margin-left: -5pt;
-    margin-top: 10pt;
-  }
-}
   ul {
     list-style-type: none;
     margin-top: -5px;
     padding: 0;
     overflow: hidden;
     float: right;
-  }
-    li a {
-      display: block;
-      padding: 10px;
+    li{
+      a{
+        display: block;
+        padding: 10px;
+      }
     }
+  }
+}
 .lista {
   list-style: none;
 }
@@ -92,7 +96,7 @@ nav {
 #contenedor {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 2fr;
+  grid-template-rows: 2fr 2fr;
   grid-row-gap: 5pt;
   grid-template-areas:
     "logo           menu"
@@ -162,12 +166,10 @@ nav {
   width: 200pt;
   height: 200pt;
 }
-
 /*RESERVAS.HTML*/
 input{
-  font-size: 2rem !important;
+  font-size: $tamañoTexto2rem !important;
 }
-
 /*ENVIOS.HTML*/
 iframe {
   width: 100%;
@@ -175,7 +177,6 @@ iframe {
 .cuadroDialogo{
   color: black;
 }
-
 /*FOOTER*/
 .redesSociales{
   display: flex;
@@ -195,7 +196,6 @@ iframe {
     margin-top: 10pt;
   }
 }
-
 @media (max-width: 767px){
   /*INDEX.HTML*/
   .smNoVer {
@@ -205,19 +205,16 @@ iframe {
   .tamañoDiv {
     height: auto;
   }
-
   /*FOOTER*/
   .redesSociales__iconos{
     margin: 0 5%;
   }
 }
-
 @media (min-width: 768px) and (max-width: 991px) {
   /*NAVEGADOR*/
   .navFlotante {
     float: left;
   }
-
   /*INDEX.HTML*/
   .grillaImagenes {
     display: grid;
@@ -259,7 +256,6 @@ iframe {
   .mdNoVer {
     display: none;
   }
-
   /*GALERIA.HTML*/
   /*IMAGENES*/
   .bordeRedondeado{
@@ -267,7 +263,6 @@ iframe {
       border-radius: $redondeo;
     }
   }
-
   /*FOOTER*/
   .redesSociales__iconos {
     margin: 0 10%;
@@ -275,13 +270,11 @@ iframe {
     display: inline-block;
   }
 }
-
 @media (min-width: 992px){
   /*NAVEGADOR*/
   .navFlotante {
     float: left;
   }
-
   /*INDEX*/
   /*div contenedor de toda la seccion*/
   .grilla {
@@ -348,7 +341,6 @@ iframe {
   .lgNoVer {
     display: none;
   }
-
   /*GALERIA.HTML*/
   /*DESTACADOS*/
   $colores:(
@@ -364,7 +356,6 @@ iframe {
       box-shadow: 2pt 2pt 3pt #3c3d3d;
     }
   };
-
   /*FOOTER*/
   .redesSociales__iconos {
     margin: 0 10%;
@@ -372,13 +363,11 @@ iframe {
     display: inline-block;
   }
 }
-
 @media (min-width:1200px){
   /*INDEX.HTML*/
   .lgNoVer {
     display: inline-block;
   }
-  
   /*GALERIA.HTML*/
   /*IMAGENES*/
   $colorFondo:rgba(0, 0, 0, 0.856);
