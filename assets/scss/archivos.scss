@@ -13,6 +13,10 @@ $tamañoTexto2rem: 2rem;
   font-style: italic;
   font-size: 2rem;
 }
+@mixin tamaño-img-200px{
+  width: 200pt;
+  height: 200pt;
+}
 /* ETIQUETAS Y CLASES GENERALES*/
 header{
   box-shadow: 2pt 2pt 10pt #000000d0;
@@ -58,10 +62,10 @@ nav {
   font-weight: 200;
   text-align: right;
   & a {
-    outline: none;
-    text-decoration: none;
-    padding: 2pt 1pt 0;
-    transition: all 2s;
+      outline: none;
+      text-decoration: none;
+      padding: 2pt 1pt 0;
+      transition: all 2s;
     &:link {
       color: rgba(255, 255, 255, 0.959);
     }
@@ -138,7 +142,6 @@ nav {
       box-shadow: $sombra;
     }
   }
-
 /*GALERIA.HTML*/
 /*FLEXBOX*/
 .tamañoDiv {
@@ -163,8 +166,7 @@ nav {
   height: 300pt;
 }
 .tamañoDestacados {
-  width: 200pt;
-  height: 200pt;
+  @include tamaño-img-200px;
 }
 /*RESERVAS.HTML*/
 input{
@@ -182,18 +184,18 @@ iframe {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  a{
-  text-decoration: none;
-  color: white;
-  transition-duration: 3s;
-  }
-  a:link {
-    color: rgba(255, 255, 255, 0.774);
-  }
-  a:hover {
-    color: rgba(143, 140, 140, 0.671);
-    margin-left: 15pt;
-    margin-top: 10pt;
+  & a{
+      text-decoration: none;
+      color: white;
+      transition-duration: 3s;
+    &:link {
+      color: rgba(255, 255, 255, 0.774);
+    }
+    &:hover {
+      color: rgba(143, 140, 140, 0.671);
+      margin-left: 15pt;
+      margin-top: 10pt;
+    }
   }
 }
 @media (max-width: 767px){
@@ -240,8 +242,7 @@ iframe {
       justify-self: right;
       align-self: start;
       img{
-        width: 200pt;
-        height: 200pt;
+        @include tamaño-img-200px;
       }
     }
     .abajoDerecha {
@@ -249,8 +250,7 @@ iframe {
       justify-self: left;
       align-self: start;
       img{
-        width: 200pt;
-        height: 200pt;
+        @include tamaño-img-200px;
       }
     }
   .mdNoVer {
@@ -325,8 +325,7 @@ iframe {
       justify-self: start;
       align-self: start;
       img{
-        width: 200pt;
-        height: 200pt;
+        @include tamaño-img-200px;
       }
     }
     .abajoDerecha {
@@ -334,8 +333,7 @@ iframe {
       justify-self: start;
       align-self: start;
       img{
-        width: 200pt;
-        height: 200pt;
+        @include tamaño-img-200px;
       }
     }
   .lgNoVer {
