@@ -3,3 +3,8 @@ buenasPracticasPrincipiosSEO.rtf
 ~$enasPracticasPrincipiosSEO.rtf
 node_modules
 assets/scss/sass-responsivo.scss
+assets/scss/_mediaQueries.scss
+
+assets/css/mediaQueries.css
+assets/css/proyecto.css
+assets/css/sass-responsivo.css
