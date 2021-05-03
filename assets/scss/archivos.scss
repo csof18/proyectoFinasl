@@ -230,8 +230,8 @@ iframe {
     grid-template-areas:
     "imgArriba          imgArriba"
     "abajoIzquierda     abajoDerecha";
-    justify-self: center;
     width: 100%;
+    justify-self: center;
   }
     .imgArriba {
       grid-area: imgArriba;
