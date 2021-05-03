@@ -1,7 +1,7 @@
 {
   "name": "proyectofinasl",
   "version": "1.0.0",
-  "description": "",
+  "description": "pag web para una agencia de fotografia, 'vida e pixeles' se aplico html, scss, css y bootstrap",
   "main": "index.js",
   "scripts": {
     "build-css": "node-sass assets/scss -o assets/css",
