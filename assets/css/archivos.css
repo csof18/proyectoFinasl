@@ -85,7 +85,7 @@ nav {
 #contenedor {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 2fr 2fr;
+  grid-template-rows: 2fr;
   grid-row-gap: 5pt;
   grid-template-areas: "logo           menu" "encabezado     encabezado";
   justify-content: start;
@@ -176,6 +176,11 @@ iframe {
       color: rgba(143, 140, 140, 0.671);
       margin-left: 15pt;
       margin-top: 10pt; }
+
+@media (max-width: 319px) {
+  #imgLogo {
+    width: 120pt;
+    height: 120pt; } }
 
 @media (max-width: 767px) {
   /*INDEX.HTML*/

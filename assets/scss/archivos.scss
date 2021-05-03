@@ -100,7 +100,7 @@ nav {
 #contenedor {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-rows: 2fr 2fr;
+  grid-template-rows: 2fr;
   grid-row-gap: 5pt;
   grid-template-areas:
     "logo           menu"
@@ -130,7 +130,6 @@ nav {
 .encabezado {
   grid-area: encabezado;
 }
-
 /*INDEX.HTML*/
 .conjuntoImagenes{
     display: flex;
@@ -141,7 +140,7 @@ nav {
       height: 250pt;
       box-shadow: $sombra;
     }
-  }
+}
 /*GALERIA.HTML*/
 /*FLEXBOX*/
 .tamañoDiv {
@@ -196,6 +195,12 @@ iframe {
       margin-left: 15pt;
       margin-top: 10pt;
     }
+  }
+}
+@media (max-width: 319px){
+  #imgLogo{
+    width: 120pt;
+    height: 120pt;
   }
 }
 @media (max-width: 767px){
