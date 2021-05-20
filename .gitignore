@@ -4,7 +4,9 @@ buenasPracticasPrincipiosSEO.rtf
 node_modules
 assets/scss/sass-responsivo.scss
 assets/scss/_mediaQueries.scss
+assets/scss/archivo.scss
 
 assets/css/mediaQueries.css
 assets/css/proyecto.css
 assets/css/sass-responsivo.css
+assets/css/archivo.css
