@@ -5,10 +5,8 @@
 :root{
   font-size: 10px;
 }
-$colorFondo: rgb(49, 47, 47);
-$redondeo:2%;
-$sombra:2pt 2pt 10pt #ffffffd0;
-$tamañoTexto2rem: 2rem;
+@import"variables";
+
 @mixin fuente-cursiva-2rem {
   font-style: italic;
   font-size: 2rem;
