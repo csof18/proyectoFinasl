@@ -12,8 +12,10 @@
   height: 100vh;
   background-color: #000000;
   background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
-  /*background-color: #537895;
-    background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);*/ }
+  /* background-color: #537895;
+    background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);*/
+  /*background-color: $colorFondo;*/
+  /*este es el mismo color de toda la web*/ }
 
 .tamañoImg404 {
   width: 85%;
@@ -204,8 +206,7 @@ iframe {
       color: rgba(255, 255, 255, 0.774); }
     .redesSociales a:hover {
       color: rgba(143, 140, 140, 0.671);
-      margin-left: 15pt;
-      margin-top: 10pt; }
+      margin-top: 5pt; }
 
 @media (max-width: 319px) {
   #imgLogo {
