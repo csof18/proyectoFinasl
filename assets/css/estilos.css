@@ -14,6 +14,27 @@
   /*background-color: #537895;
     background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);*/ }
 
+.tamañoImg404 {
+  width: 100%;
+  height: 90%; }
+
+.pieDePagina404 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-top: 5%; }
+  .pieDePagina404 a {
+    text-decoration: none;
+    color: white;
+    transition-duration: 3s; }
+  .pieDePagina404:link {
+    color: rgba(255, 255, 255, 0.774); }
+  .pieDePagina404:hover {
+    color: rgba(143, 140, 140, 0.671); }
+
+.pieDePagina404__iconos {
+  margin: 0 5%; }
+
 /* ETIQUETAS Y CLASES GENERALES*/
 header {
   box-shadow: 2pt 2pt 10pt #000000d0; }
