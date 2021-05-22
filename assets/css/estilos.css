@@ -26,10 +26,10 @@
     text-decoration: none;
     color: white;
     transition-duration: 3s; }
-  .pieDePagina404:link {
-    color: rgba(255, 255, 255, 0.774); }
-  .pieDePagina404:hover {
-    color: rgba(143, 140, 140, 0.671); }
+    .pieDePagina404 a:link {
+      color: rgba(255, 255, 255, 0.774); }
+    .pieDePagina404 a:hover {
+      color: rgba(143, 140, 140, 0.671); }
 
 .pieDePagina404__iconos {
   margin: 0 5%; }
