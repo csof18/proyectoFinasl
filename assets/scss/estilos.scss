@@ -5,10 +5,17 @@
 :root{
   font-size: 10px;
 }
-$colorFondo: rgb(49, 47, 47);
-$redondeo:2%;
-$sombra:2pt 2pt 10pt #ffffffd0;
-$tamaño2rem:2rem;
+@import"variables";
+@import"pagDeError";
+
+@mixin fuente-cursiva-2rem {
+  font-style: italic;
+  font-size: 2rem;
+}
+@mixin tamaño-img-200px{
+  width: 200pt;
+  height: 200pt;
+}
 /* ETIQUETAS Y CLASES GENERALES*/
 header{
   box-shadow: 2pt 2pt 10pt #000000d0;
@@ -20,20 +27,19 @@ h2, h3{
   font-size: 3rem;
 }
 p {
-  font-style: italic;
-  font-size: $tamaño2rem;
+  @include fuente-cursiva-2rem;
 }
 .destacadoH3{
   font-size: 2.5rem;
 }
 .tamañoBotones{
-  font-size: $tamaño2rem !important;
+  font-size: $tamañoTexto2rem !important;
 }
 /*FONDO*/
 body {
   background-color:$colorFondo;
   color: white;
-  font-size: $tamaño2rem;
+  font-size: $tamañoTexto2rem;
   width: 100%; /*ancho*/
   height: 100vh; /*alto*/
   text-align: justify;
@@ -48,39 +54,41 @@ body {
   margin: 5%;
 }
 nav {
-  font-style: italic;
+  @include fuente-cursiva-2rem;
   font-weight: 200;
   text-align: right;
-  a {
-    outline: none;
-    text-decoration: none;
-    padding: 2pt 1pt 0;
-    transition: all 2s;
+  & a {
+      outline: none;
+      text-decoration: none;
+      padding: 2pt 1pt 0;
+      transition: all 2s;
+    &:link {
+      color: white;
+    }
+    &:visited {
+      color: #cfd0d1;
+    }
+    &:hover {
+      color:#adb5bd;
+      text-decoration: none;
+      margin-left: -5pt;
+      margin-top: 10pt;
+    }
   }
-  a:link {
-    color: rgba(255, 255, 255, 0.959);
-  }
-  a:visited {
-    color: rgba(171, 208, 214, 0.644);
-  }
-  a:hover {
-    color: rgb(107, 102, 102);
-    text-decoration: none;
-    margin-left: -5pt;
-    margin-top: 10pt;
-  }
-}
   ul {
     list-style-type: none;
     margin-top: -5px;
     padding: 0;
     overflow: hidden;
     float: right;
-  }
-    li a {
-      display: block;
-      padding: 10px;
+    li{
+      a{
+        display: block;
+        padding: 10px;
+      }
     }
+  }
+}
 .lista {
   list-style: none;
 }
@@ -118,19 +126,17 @@ nav {
 .encabezado {
   grid-area: encabezado;
 }
-
 /*INDEX.HTML*/
 .conjuntoImagenes{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  img {
-    width: 120pt;
-    height: 250pt;
-    box-shadow: $sombra;
-  }
-  }
-
+    img {
+      width: 120pt;
+      height: 250pt;
+      box-shadow: $sombra;
+    }
+}
 /*GALERIA.HTML*/
 /*FLEXBOX*/
 .tamañoDiv {
@@ -155,15 +161,12 @@ nav {
   height: 300pt;
 }
 .tamañoDestacados {
-  width: 200pt;
-  height: 200pt;
+  @include tamaño-img-200px;
 }
-
 /*RESERVAS.HTML*/
 input{
-  font-size: $tamaño2rem !important;
+  font-size: $tamañoTexto2rem !important;
 }
-
 /*ENVIOS.HTML*/
 iframe {
   width: 100%;
@@ -171,27 +174,30 @@ iframe {
 .cuadroDialogo{
   color: black;
 }
-
 /*FOOTER*/
 .redesSociales{
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  a{
-  text-decoration: none;
-  color: white;
-  transition-duration: 3s;
-  }
-  a:link {
-    color: rgba(255, 255, 255, 0.774);
-  }
-  a:hover {
-    color: rgba(143, 140, 140, 0.671);
-    margin-left: 15pt;
-    margin-top: 10pt;
+  & a{
+      text-decoration: none;
+      color: white;
+      transition-duration: 3s;
+    &:link {
+      color: rgba(255, 255, 255, 0.774);
+    }
+    &:hover {
+      color: rgba(143, 140, 140, 0.671);
+      margin-top: 5pt;
+    }
   }
 }
-
+@media (max-width: 319px){
+  #imgLogo{
+    width: 120pt;
+    height: 120pt;
+  }
+}
 @media (max-width: 767px){
   /*INDEX.HTML*/
   .smNoVer {
@@ -206,7 +212,6 @@ iframe {
     margin: 0 5%;
   }
 }
-
 @media (min-width: 768px) and (max-width: 991px) {
   /*NAVEGADOR*/
   .navFlotante {
@@ -237,8 +242,7 @@ iframe {
       justify-self: right;
       align-self: start;
       img{
-        width: 200pt;
-        height: 200pt;
+        @include tamaño-img-200px;
       }
     }
     .abajoDerecha {
@@ -246,8 +250,7 @@ iframe {
       justify-self: left;
       align-self: start;
       img{
-        width: 200pt;
-        height: 200pt;
+        @include tamaño-img-200px;
       }
     }
   .mdNoVer {
@@ -267,7 +270,6 @@ iframe {
     display: inline-block;
   }
 }
-
 @media (min-width: 992px){
   /*NAVEGADOR*/
   .navFlotante {
@@ -323,8 +325,7 @@ iframe {
       justify-self: start;
       align-self: start;
       img{
-        width: 200pt;
-        height: 200pt;
+        @include tamaño-img-200px;
       }
     }
     .abajoDerecha {
@@ -332,8 +333,7 @@ iframe {
       justify-self: start;
       align-self: start;
       img{
-        width: 200pt;
-        height: 200pt;
+        @include tamaño-img-200px;
       }
     }
   .lgNoVer {
@@ -361,7 +361,6 @@ iframe {
     display: inline-block;
   }
 }
-
 @media (min-width:1200px){
   /*INDEX.HTML*/
   .lgNoVer {
@@ -378,8 +377,8 @@ iframe {
   );
   /*EACH*/
   @each $redondeo, $valor in $radius {
-      .radius#{$redondeo}{
-          border-radius: #{$valor};
-      }
-  }; 
+    .radius#{$redondeo}{
+      border-radius: #{$valor};
+    }
+  };
 }

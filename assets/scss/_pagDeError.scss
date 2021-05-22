@@ -1,0 +1,31 @@
+/*CSS PAGINA ERROR 404*/
+#colorBody404{    
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+}
+.tamañoImg404{
+    width: 80vw;
+    max-height: 90%;
+}
+.pieDePagina404 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center; 
+    margin-top: 5%;
+    & a {
+        text-decoration: none;
+        color: white;
+        transition-duration: 3s;
+    }
+    &:link {
+        color: rgba(255, 255, 255, 0.774);
+    }
+    &:hover {
+        color: rgba(143, 140, 140, 0.671);
+    }
+}
+.pieDePagina404__iconos{
+    margin: 0 5%;
+}

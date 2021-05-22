@@ -1,0 +1,23 @@
+@charset "UTF-8";
+#colorBody {
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
+  /*background-color: #537895;
+    background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);*/ }
+
+.tamañoImg404 {
+  width: 100%;
+  height: 90%; }
+
+.pieDePagina404 a {
+  text-decoration: none;
+  color: white;
+  transition-duration: 3s; }
+
+.pieDePagina404 .pieDePagina404 a:link {
+  color: rgba(255, 255, 255, 0.774); }
+
+.pieDePagina404 .pieDePagina404 a:hover {
+  color: rgba(143, 140, 140, 0.671); }

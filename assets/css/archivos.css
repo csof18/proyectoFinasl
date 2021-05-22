@@ -51,34 +51,32 @@ body {
 
 nav {
   font-style: italic;
+  font-size: 2rem;
   font-weight: 200;
-  text-align: right;
-  font-size: 2rem; }
+  text-align: right; }
   nav a {
     outline: none;
     text-decoration: none;
     padding: 2pt 1pt 0;
     transition: all 2s; }
-  nav a:link {
-    color: rgba(255, 255, 255, 0.959); }
-  nav a:visited {
-    color: rgba(171, 208, 214, 0.644); }
-  nav a:hover {
-    color: #6b6666;
-    text-decoration: none;
-    margin-left: -5pt;
-    margin-top: 10pt; }
-
-ul {
-  list-style-type: none;
-  margin-top: -5px;
-  padding: 0;
-  overflow: hidden;
-  float: right; }
-
-li a {
-  display: block;
-  padding: 10px; }
+    nav a:link {
+      color: white; }
+    nav a:visited {
+      color: #cfd0d1; }
+    nav a:hover {
+      color: #adb5bd;
+      text-decoration: none;
+      margin-left: -5pt;
+      margin-top: 10pt; }
+  nav ul {
+    list-style-type: none;
+    margin-top: -5px;
+    padding: 0;
+    overflow: hidden;
+    float: right; }
+    nav ul li a {
+      display: block;
+      padding: 10px; }
 
 .lista {
   list-style: none; }
@@ -172,12 +170,17 @@ iframe {
     text-decoration: none;
     color: white;
     transition-duration: 3s; }
-  .redesSociales a:link {
-    color: rgba(255, 255, 255, 0.774); }
-  .redesSociales a:hover {
-    color: rgba(143, 140, 140, 0.671);
-    margin-left: 15pt;
-    margin-top: 10pt; }
+    .redesSociales a:link {
+      color: rgba(255, 255, 255, 0.774); }
+    .redesSociales a:hover {
+      color: rgba(143, 140, 140, 0.671);
+      margin-left: 15pt;
+      margin-top: 10pt; }
+
+@media (max-width: 319px) {
+  #imgLogo {
+    width: 120pt;
+    height: 120pt; } }
 
 @media (max-width: 767px) {
   /*INDEX.HTML*/
@@ -199,8 +202,8 @@ iframe {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: repeat(2, 2fr);
-    width: 100%;
     grid-template-areas: "imgArriba          imgArriba" "abajoIzquierda     abajoDerecha";
+    width: 100%;
     justify-self: center; }
   .imgArriba {
     grid-area: imgArriba;
