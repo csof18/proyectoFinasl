@@ -14,8 +14,8 @@
   background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%); }
 
 .tamañoImg404 {
-  width: 85%;
-  height: 42vh; }
+  width: 80vw;
+  max-height: 90%; }
 
 .pieDePagina404 {
   display: flex;
